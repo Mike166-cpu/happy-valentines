@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mynerve&family=PT+Serif+Caption:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Delius&family=Mynerve&family=PT+Serif+Caption:ital@0;1&display=swap");
+
+.cute-font {
+  font-family: "Pacifico", cursive;
+}
+
+.fonti {
+  font-family: "Mynerve", serif;
+}
+
+.delius-regular {
+  font-family: "Delius", serif;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.typing-animation {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 0.15em solid white;
+  animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: none;
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: auto; /* Adjust the width as needed */
+  max-width: auto; /* Set a maximum width */
+  height: auto; /* Adjust the height as needed */
+  max-height: 400px; /* Set a maximum height */
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.envelope {
+  position: relative;
+  padding-top: 20px;
+  width: 500px;
+  height: auto; /* Adjust the height to auto */
+  border-radius: 10px;
+  z-index: 1001;
+}
+.envelope-body {
+  background-color: rgba(255, 255, 255, 0.8); /* White with 80% opacity */
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  z-index: 1;
+  background: url("../assets/kisses-removebg-preview.png") no-repeat center;
+  background-size: contain;
+}
+
+.envelope-body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+@keyframes flap {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(-30deg);
+  }
+}
+
+.signature {
+  margin-top: 20px; /* Add margin to the top to separate it from the previous paragraph */
+  align-self: flex-end; /* Align the signature to the end of the container */
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
